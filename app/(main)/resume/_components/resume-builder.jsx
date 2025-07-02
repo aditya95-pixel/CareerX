@@ -23,8 +23,6 @@ import useFetch from "@/hooks/use-fetch";
 import { useUser } from "@clerk/nextjs";
 import { entriesToMarkdown } from "@/app/lib/helper";
 import { resumeSchema } from "@/app/lib/schema";
-import { jsPDF } from "jspdf";
-import html2canvas from "html2canvas"; 
 
 export default function ResumeBuilder({ initialContent }) {
   const [activeTab, setActiveTab] = useState("edit");
@@ -112,54 +110,6 @@ export default function ResumeBuilder({ initialContent }) {
   };
 
   const [isGenerating, setIsGenerating] = useState(false);
-
-  const generatePDF = async () => {
-  setIsGenerating(true);
-  try {
-    const element = document.getElementById("resume-pdf");
-
-    if (!element) {
-      console.error("Element with ID 'resume-pdf' not found.");
-      return; // Exit if the element isn't found
-    }
-
-    // Define options for html2canvas (used by jsPDF's html() method)
-    const html2canvasOptions = {
-      scale: 2, // Scale up for better resolution in the PDF
-      useCORS: true, // Important if your HTML includes images from other domains
-      logging: true, // Enable logging for debugging html2canvas
-      // You can add more html2canvas options here if needed, e.g., scrollY: -window.scrollY
-    };
-
-    // Define options for jsPDF
-    const jsPDFOptions = {
-      unit: "mm",
-      format: "a4",
-      orientation: "portrait",
-    };
-
-    // Create a new jsPDF instance
-    const doc = new jsPDF(jsPDFOptions);
-
-    // Use jsPDF's html() method to convert the HTML element
-    await doc.html(element, {
-      callback: function (pdf) {
-        // This callback is executed once the HTML is rendered onto the PDF
-        pdf.save("resume.pdf"); // Save the generated PDF
-      },
-      x: 15, // Left margin (in units defined by jsPDFOptions.unit, which is 'mm')
-      y: 15, // Top margin
-      html2canvas: html2canvasOptions, // Pass the html2canvas options
-      // You can add 'margin' here directly, but x/y often work better with html()
-      // margin: [15, 15, 15, 15], // [top, right, bottom, left]
-    });
-
-  } catch (error) {
-    console.error("PDF generation error:", error);
-  } finally {
-    setIsGenerating(false);
-  }
-};
 
   const onSubmit = async (data) => {
     try {
