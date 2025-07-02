@@ -87,7 +87,6 @@ export async function getUserOnboardingStatus() {
         industry: true,
       },
     });
-
     return {
       isOnboarded: !!user?.industry,
     };

@@ -9,8 +9,21 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { faqs } from "@/data/faqs";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { getUserOnboardingStatus } from "@/actions/user";
+import { redirect} from "next/navigation";
+import { checkSignin } from "@/lib/checkSignin";
 
-export default function Home() {
+export default async function Home() {
+  const val=await checkSignin();
+   if (val) {
+      const { isOnboarded } = await getUserOnboardingStatus();
+      if(!isOnboarded){
+        redirect("/onboarding");
+      }
+      else{
+        redirect("/dashboard");
+      }
+    }
   return (
     <>
       <div className="grid-background"></div>
