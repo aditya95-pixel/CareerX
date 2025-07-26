@@ -693,7 +693,7 @@ This file initializes a single instance of Prisma Client and prevents it from be
 
 ---
 
-###Imports
+### Imports
 
 ```js
 import { PrismaClient } from "./generated/prisma";
