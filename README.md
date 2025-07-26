@@ -703,9 +703,6 @@ export const checkUser = async () => {
 | User is authenticated but not in DB | Creates and returns new user |
 | Error during DB operation           | Logs error (no return value) |
 
----
-
-Here's a **Markdown explanation** of your `lib/prisma.js` file:
 
 ---
 
@@ -715,7 +712,7 @@ This file initializes a single instance of Prisma Client and prevents it from be
 
 ---
 
-## 📦 Imports
+###Imports
 
 ```js
 import { PrismaClient } from "./generated/prisma";
