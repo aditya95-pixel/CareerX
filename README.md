@@ -1182,7 +1182,7 @@ Prompt includes:
 ---
 
 
-# `app/api/inngest/route.js` Explanation
+## `app/api/inngest/route.js` Explanation
 
 This file sets up an API route using the **Inngest** framework, which enables background function execution and event-driven workflows in Next.js applications.
 
@@ -1227,7 +1227,7 @@ This route acts as the server-side endpoint for Inngest in our Next.js app. It:
 
 ---
 
-### `app/lib/schema.js` Explanation
+## `app/lib/schema.js` Explanation
 
 This file defines **validation schemas** using the [`zod`](https://github.com/colinhacks/zod) library for various forms used throughout the application. It helps validate and transform user inputs before processing or saving them to a database.
 
