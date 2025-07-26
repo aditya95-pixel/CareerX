@@ -1,8 +1,5 @@
 # CareerX Documentation
 
-Okay, here's the explanation of your Prisma schema file in a Markdown format suitable for project documentation.
-
------
 ## Why PostgreSQL and Prisma ORM?
 
 **PostgreSQL** (often abbreviated as Postgres) is an open-source, powerful, and highly reliable relational database management system (RDBMS).
@@ -183,10 +180,6 @@ These steps ensure that our application's data models are always in sync with ou
 
 -----
 
-Sure! Here's a **Markdown-formatted explanation** of the provided **`ModeToggle`** component:
-
----
-
 ## `ModeToggle` Component (Dark/Light Theme Switch)
 
 This React component provides a **toggle button** to switch between **light** and **dark** themes in a Next.js app using the `next-themes` library and **ShadCN UI components**.
@@ -239,10 +232,6 @@ export function ModeToggle() {
 ```
 
 * Clicking an option calls `setTheme("light")` or `setTheme("dark")` from `next-themes`.
-
----
-
-Sure! Here's a complete **Markdown-formatted explanation** of your custom hook `useFetch`:
 
 ---
 
@@ -332,10 +321,6 @@ return { data, loading, error, fn, setData };
 * `error`: Error object if the request fails
 * `fn`: The wrapped async function you call to trigger the fetch
 * `setData`: Allows manual update of the data if needed
-
----
-
-Sure! Here's a **Markdown-formatted explanation** of your `lib/inngest/client.js` file:
 
 ---
 
@@ -521,10 +506,6 @@ await step.run(`Update ${industry} insights`, async () => {
   * Latest AI-generated insights,
   * `lastUpdated` timestamp,
   * `nextUpdate` set to 1 week later.
-
----
-
-Here's a **Markdown-formatted explanation** of the `lib/checkSignin.js` file:
 
 ---
 
@@ -1095,17 +1076,13 @@ Uses **Google Gemini API** to enhance a specific part of a resume (like "experie
 
 ---
 
-Here's a **markdown-formatted explanation** of the `actions/cover-letter.js` file:
-
----
-
-# 📄 `actions/cover-letter.js` — Cover Letter Actions with Google Gemini & Prisma
+## `actions/cover-letter.js` — Cover Letter Actions with Google Gemini & Prisma
 
 This file contains **server-side logic** to generate, retrieve, and delete AI-generated cover letters using **Google Gemini API**, **Prisma ORM**, and **Clerk authentication**.
 
 ---
 
-## ✅ Prerequisites
+### Prerequisites
 
 * `@google/genai`: For calling the Gemini API
 * `@clerk/nextjs/server`: For getting the authenticated user
@@ -1114,16 +1091,16 @@ This file contains **server-side logic** to generate, retrieve, and delete AI-ge
 
 ---
 
-## 🧠 `generateCoverLetter(data)`
+### `generateCoverLetter(data)`
 
-### Purpose:
+#### Purpose:
 
 Generates a professional cover letter using Gemini API based on:
 
 * Authenticated user profile
 * Job details passed in `data`
 
-### Steps:
+#### Steps:
 
 1. Authenticate user using Clerk.
 2. Fetch user details from the database.
@@ -1131,7 +1108,7 @@ Generates a professional cover letter using Gemini API based on:
 4. Call the Gemini API using `generateContent()`.
 5. Save the generated letter in the `coverLetter` table using Prisma.
 
-### Returns:
+#### Returns:
 
 * The saved cover letter document.
 
@@ -1204,9 +1181,6 @@ Prompt includes:
 
 ---
 
-Here's a detailed explanation of the `app/api/inngest/route.js` file in **Markdown syntax**:
-
----
 
 # `app/api/inngest/route.js` Explanation
 
@@ -1250,10 +1224,6 @@ This route acts as the server-side endpoint for Inngest in our Next.js app. It:
 * Initializes Inngest with your client configuration.
 * Registers the `generateIndustryInsights` function for event handling.
 * Exports API handlers (`GET`, `POST`, `PUT`) for Inngest to manage function execution.
-
----
-
-Here's a clear Markdown explanation for the `app/lib/schema.js` file:
 
 ---
 
