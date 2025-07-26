@@ -361,10 +361,6 @@ export const inngest = new Inngest({ id: "careerx", name: "Careerx" });
 
 ---
 
-Here’s a detailed explanation of the code in `lib/inngest/functions.js` written in **Markdown syntax**, suitable for documentation:
-
----
-
 ## `lib/inngest/functions.js` – Industry Insights Generator (Inngest + Gemini)
 
 This file defines a scheduled background function using **Inngest** and **Google Gemini (GenAI)** to automatically generate and update industry insights every week.
@@ -594,10 +590,6 @@ export const checkSignin = async () => {
 
 ---
 
-Here is a **Markdown-formatted explanation** of the `lib/checkUser.js` file:
-
----
-
 ## `lib/checkUser.js` – Get or Create a Logged-In User
 
 This utility function is used to:
@@ -751,10 +743,6 @@ This file exports a helper function cn that helps combine and conditionally merg
 
 ## data folder contain various js files which in turn contain dummy data for our landing page
 
-Here’s a **Markdown-formatted explanation** of the `actions/user.js` file:
-
----
-
 ## `actions/user.js`
 
 This file contains **server-side functions** related to user operations, including updating user profile details and checking onboarding status. These functions interact with the **Prisma database** and use **Clerk for authentication**.
@@ -840,10 +828,6 @@ Checks if the authenticated user has completed onboarding by verifying whether t
 
 ---
 
-Here’s a clear and well-formatted explanation of the `actions/dashboard.js` file using **Markdown syntax**:
-
----
-
 ## `actions/dashboard.js`
 
 This file defines **server-side logic** for:
@@ -917,10 +901,6 @@ Returns industry insight data for the currently logged-in user. If not available
    * Save them to the `industryInsight` table with a `nextUpdate` date set to 7 days from now.
 
 5. If user **already has insights**, return them directly.
-
----
-
-Here is an explanation of the `actions/interview.js` file in **Markdown syntax** for clear documentation and learning:
 
 ---
 
@@ -1007,10 +987,6 @@ Fetches all past assessments for the logged-in user.
 | `generateQuiz()`   | Creates personalized multiple-choice questions via Gemini |
 | `saveQuizResult()` | Saves results and generates AI-based tips                 |
 | `getAssessments()` | Lists previous quiz results for a user                    |
-
----
-
-Here is a **Markdown explanation** of the `actions/resume.js` file in your Next.js app:
 
 ---
 
