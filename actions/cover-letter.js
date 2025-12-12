@@ -44,7 +44,7 @@ export async function generateCoverLetter(data) {
 
   try {
     const response = await genAI.models.generateContent({
-      model:'gemma-3-27b',
+      model:'gemma-3-27b-it',
       contents:prompt
     });
     const content = response.text.trim();

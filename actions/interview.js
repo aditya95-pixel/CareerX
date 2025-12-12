@@ -44,7 +44,7 @@ export async function generateQuiz() {
 
   try {
     const response = await genAI.models.generateContent({
-        model:'gemma-3-27b',
+        model:'gemma-3-27b-it',
         contents:prompt
     });
     const text = response.text;
