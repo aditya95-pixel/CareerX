@@ -87,7 +87,7 @@ export async function improveWithAI({ current, type }) {
 
   try {
     const response = await genAI.models.generateContent({
-        model:'gemma-3-27b-it',
+        model:'gemma-4-31b-it',
         contents:prompt
     });
     const improvedContent = response.text.trim();

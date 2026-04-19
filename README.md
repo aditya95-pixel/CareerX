@@ -458,7 +458,7 @@ const res = await step.ai.wrap(
   "gemini",
   async (p) => {
     return await genAI.models.generateContent({
-      model: 'gemini-2.0-flash-001',
+      model: 'gemma-4-31b-it',
       contents: p
     });
   },
@@ -1040,7 +1040,7 @@ Uses **Google Gemini API** to enhance a specific part of a resume (like "experie
 1. Authenticate the user.
 2. Fetch the user along with `industryInsight` (to tailor resume to domain).
 3. Construct a detailed **prompt** for the Gemini model to improve the resume section.
-4. Call `genAI.models.generateContent(...)` with the `gemini-2.0-flash-001` model.
+4. Call `genAI.models.generateContent(...)` with the `gemma-4-31b-it` model.
 5. Return the **improved version** of the content.
 
 #### Prompt includes:

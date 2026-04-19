@@ -28,7 +28,7 @@ export const generateAIInsights = async (industry) => {
         `;
 
   const response = await genAI.models.generateContent({
-    model:'gemma-3-27b-it',
+    model:'gemma-4-31b-it',
     contents:prompt
   });
   const text = response.text;

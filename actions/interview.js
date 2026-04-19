@@ -44,7 +44,7 @@ export async function generateQuiz() {
 
   try {
     const response = await genAI.models.generateContent({
-        model:'gemma-3-27b-it',
+        model:'gemma-4-31b-it',
         contents:prompt
     });
     const text = response.text;
@@ -102,7 +102,7 @@ export async function saveQuizResult(questions, answers, score) {
 
     try {
       const tipResult = await genAI.models.generateContent({
-        model:'gemini-2.0-flash-001',
+        model:'gemma-4-31b-it',
         contents:improvementPrompt
     });
 
